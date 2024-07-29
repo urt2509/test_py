@@ -32,9 +32,8 @@ def adjust_for_weekend(birthday):
 
 def get_upcoming_birthdays(users, days=7):
     upcoming_birthdays = []
-    # today = date.today()
-    today = string_to_date("2024.12.30")
-
+    today = date.today()
+    
     for user in users:
         congrates_users = []
 
@@ -43,8 +42,7 @@ def get_upcoming_birthdays(users, days=7):
         if birthday_this_year < today: 
             birthday_this_year = user["birthday"].replace(year=today.year + 1)
             congrates_users.append({"name": user["name"], "birthday": birthday_this_year})
-            # print("new year: ",congrates_users)
-
+            
         else: 
            congrates_users.append({"name": user["name"], "birthday": birthday_this_year})
            
@@ -68,5 +66,5 @@ users = [
 ]
 
 prep_users = prepare_user_list(users) 
-# print("there are: ", prep_users)
+
 res = print(get_upcoming_birthdays(prep_users, 7))
