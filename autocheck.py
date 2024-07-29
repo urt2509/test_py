@@ -57,14 +57,6 @@ def get_upcoming_birthdays(users, days=7):
 
     return upcoming_birthdays
 
-# users = [
-#     { "name": "1", "birthday": "1990.08.3"},
-#     { "name": "6", "birthday": "1958.3.22"},
-#     { "name": "6", "birthday": "1958.12.31"},
-#     { "name": "J Snow", "birthday": "1990.7.31"}, 
-#     { "name": "J Doe", "birthday": "1985.08.4"}
-# ]
-
 users = [
     {"name": "Bill Gates", "birthday": "1955.01.5"},
     { "name": "Steve Jobs", "birthday": "1955.12.31"},
